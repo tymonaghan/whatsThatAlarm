@@ -3,6 +3,7 @@ import processing.sound.*;
 SoundFile alarmMMPR;
 SoundFile alarmTNGHangar;
 SoundFile alarmSplinterCell;
+SoundFile alarmHaloShield;
 Button playSiren, loopSiren, guessA, guessB, guessC;
 int randomNumber;
 StringList texts;
@@ -71,6 +72,9 @@ void playAlarmSound(int randomNumber_){
       alarmSplinterCell.loop();
   }
   break;
-  
+  case 3:
+  if (!alarmHaloShield.isPlaying()){
+      alarmHaloShield.loop();
+  }
   }//end randomNumber switch
 }//end playAlarmSound()
